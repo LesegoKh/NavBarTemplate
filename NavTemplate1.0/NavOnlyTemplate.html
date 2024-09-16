@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavTemplate</title>
+    <style>
+
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            background-repeat: no-repeat;
+        }
+        .name {
+            align-items: center;
+            justify-content: center;
+        padding-top:120px;
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:none;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .content {
+            height: 100vh;
+        }
+        a {
+            text-decoration: none;
+            color:pink;
+            font-weight: 700;
+            font-size: medium;
+        }
+        .active, ul {
+            list-style: none;
+            color: whitesmoke;
+        }
+
+        .active {
+            color:#fc036b;
+            text-decoration: underline;
+            font-weight: bold;
+            list-style: none;
+        }
+        .navbar {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            justify-content: space-between;
+            padding: 20px;
+            color: whitesmoke;
+        }
+        .nav-links li {
+            color:rgb(45, 44, 128), 28);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 30px;
+            color: #fc036b;
+            
+        }
+        .menu-btn {
+            position:absolute;
+            top: 30px;
+            right: 30px;
+            width:40px;
+            cursor: pointer;
+            display: none;
+        }
+        .ctn {
+            padding:  8px 15px;
+            background: #fc036b;
+            border-radius: 30px;
+            color: whitesmoke;
+        }
+        @media only screen and (max-width:700px){
+            body {
+                background-size: cover;
+                height: 100vh;
+                background-repeat: no-repeat;
+            }
+            .navbar {
+                padding: 0;
+            }
+            .logo {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                justify-content: center;
+                background-color: #484872;
+                margin-top: -900px;
+                transition: all 0.5s ease;
+            }
+            .menu-btn {
+                display:block;
+            }
+            .mobile-menu {
+                margin-top: 0px;
+                border-bottom-right-radius:30% ;
+
+            }
+            .nav-links li {
+                margin: 30px auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="header">
+    <header>
+    <nav class="navbar">
+        <h1 class="logo">LOGO HERE</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">EXPLORE</a></li>
+            <li><a href="#">COLLECTIONS</a></li>
+            <li><a class="ctn" href="#">CONTACT</a></li>
+        </ul>
+        <img src="./menu.png" alt="menu" class="menu-btn">
+    </nav>
+   <script>
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks = document.querySelector('.nav-links')
+
+    menuBtn.addEventListener('click',()=>{
+        navlinks.classList.toggle('mobile-menu')
+    
+    })
+   </script>
+</header>
+<section class="name">
+ <h1>Mobile & Desktop Responsive Navigational Menu Template</h1>
+ <h3>Created by: Lesego Khunou</h3>
+</section>
+</body>
+</html>
